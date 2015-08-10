@@ -133,6 +133,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "WeixinActivity"
-#  s.dependency "TencentOpenAPI", :git => 'https://github.com/Suninus/TencentOpenAPI.git'
+  s.dependency "TencentOpenAPI", :git => "https://github.com/Suninus/TencentOpenAPI.git"
 
 end

@@ -122,7 +122,6 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
-
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
@@ -133,6 +132,17 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "WeixinActivity"
-  s.dependency "TencentOpenAPI", :git => "https://github.com/Suninus/TencentOpenAPI.git"
+#  s.dependency "TencentOpenAPI", :git => "https://github.com/Suninus/TencentOpenAPI.git"
 
+  # ――― Subspec ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  s.subspec 'TencentOpenAPI' do |ts|
+  	ts.resources = "SDK/TencentOpenAPI-2.3.1/TencentOpenApi_IOS_Bundle.bundle"
+  	ts.vendored_frameworks = 'SDK/TencentOpenAPI-2.3.1/TencentOpenAPI.framework'
+  	ts.public_header_files = "SDK/TencentOpenAPI-2.3.1/TencentOpenAPI.framework/Headers/**/*.h"
+  	ts.frameworks = 'Security','CoreTelephony','SystemConfiguration','CoreGraphics'
+  	ts.libraries  = 'z','sqlite3','iconv','stdc++'
+  end
+
+  s.default_subspecs = 'TencentOpenAPI'
 end

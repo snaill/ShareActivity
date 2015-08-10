@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ShareActivity"
-  s.version      = "0.0.2"
+  s.version      = "0.0.1"
   s.summary      = "A short description of ShareActivity."
 
   s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  # s.homepage     = "http://EXAMPLE/ShareActivity"
+  s.homepage     = "https://github.com/snaill/ShareActivity"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 

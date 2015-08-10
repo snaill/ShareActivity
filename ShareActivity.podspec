@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/snaill/ShareActivity.git" }
+  s.source       = { :git => "https://github.com/snaill/ShareActivity.git" }
 #  s.source       = { :git => "http://github.com/snaill/ShareActivity.git", :tag => "0.0.1" }
 
 
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "ShareActivity/Resources/*.png"
+  s.resources = "ShareActivity/Resource/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

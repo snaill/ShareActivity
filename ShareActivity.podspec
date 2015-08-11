@@ -136,9 +136,9 @@ Pod::Spec.new do |s|
   # ――― Subspec ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.subspec 'TencentOpenAPI' do |ts|
-  	ts.resources = "ShareActivity/SDK/TencentOpenAPI-2.9.0/TencentOpenApi_IOS_Bundle.bundle"
-  	ts.vendored_frameworks = "ShareActivity/SDK/TencentOpenAPI-2.9.0/TencentOpenAPI.framework"
-  	ts.public_header_files = "ShareActivity/SDK/TencentOpenAPI-2.9.0/TencentOpenAPI.framework/Headers/**/*.h"
+  	ts.resources = "ShareActivity/SDK/TencentOpenAPI-2.9.0-min/TencentOpenApi_IOS_Bundle.bundle"
+  	ts.vendored_frameworks = "ShareActivity/SDK/TencentOpenAPI-2.9.0-min/TencentOpenAPI.framework"
+  	ts.public_header_files = "ShareActivity/SDK/TencentOpenAPI-2.9.0-min/TencentOpenAPI.framework/Headers/**/*.h"
   	ts.frameworks = 'Security','CoreTelephony','SystemConfiguration','CoreGraphics'
   	ts.libraries  = 'z','sqlite3','iconv','stdc++'
   end

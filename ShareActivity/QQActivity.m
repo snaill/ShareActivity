@@ -12,7 +12,7 @@
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems
 {
-    self.shareType = kShareMsgToQQ;
+    self.useQZone = NO;
     [super prepareWithActivityItems:activityItems];
 }
 

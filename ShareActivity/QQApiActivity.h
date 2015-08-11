@@ -15,7 +15,7 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSURL *url;
 
-@property (nonatomic) QQShareType shareType;
+@property (nonatomic) BOOL useQZone;
 
 + (void) registerApp:(NSString *)appid;
 + (BOOL) handleOpenURL:(NSURL *) url;

@@ -8,7 +8,6 @@
 
 #import "QQApiActivity.h"
 #import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/TencentApiInterface.h>
 
 @interface QQApiActivity()<TencentSessionDelegate, QQApiInterfaceDelegate>
 
@@ -157,7 +156,7 @@
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
 {
-    if ([QQApi isQQInstalled] && [QQApi isQQSupportApi]) {
+    if ([QQApiInterface isQQInstalled] && [QQApiInterface isQQSupportApi]) {
         for (id activityItem in activityItems) {
             if ([activityItem isKindOfClass:[UIImage class]]) {
                 return YES;
@@ -211,7 +210,7 @@
     
     SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:object];
     QQApiSendResultCode code;
-    if (self.shareType == kShareMsgToQQ) {
+    if (!self.useQZone) {
         //将内容分享到qq
         code = [QQApiInterface sendReq:req];
     } else {
